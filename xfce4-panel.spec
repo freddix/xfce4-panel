@@ -2,16 +2,13 @@
 
 Summary:	Next generation panel for Xfce
 Name:		xfce4-panel
-Version:	4.10.0
-Release:	2
+Version:	4.10.1
+Release:	1
 License:	GPL v2, LGPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/xfce/xfce4-panel/4.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	cf7351a4b952dbe3fc5ff509c68def33
+# Source0-md5:	8a1f8371fc725ba00f4594c5c0f81c59
 Patch0:		0456c33cceb85e64c609beecddee942624b51a72.patch
-Patch1:		17643fd28f499691ae97503eb58755b4b9fabb53.patch
-Patch2:		478c43e89b291e89f726d43a861e1266e0fa5905.patch
-Patch3:		89cfd5293f0306721f19fe6216637f3aca90372f.patch
 Patch4:		e3e50718f3b890a79c7b13f7c993248fa0e5fc7b.patch
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf
@@ -69,9 +66,6 @@ Header files for building Xfce panel plugins.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
 %patch4 -p1
 
 %build
