@@ -1,15 +1,13 @@
-%define		xfce_version	4.10.0
+%define		xfce_version	4.11.0
 
 Summary:	Next generation panel for Xfce
 Name:		xfce4-panel
-Version:	4.10.1
-Release:	2
+Version:	4.11.1
+Release:	1
 License:	GPL v2, LGPL v2
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/xfce/xfce4-panel/4.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	8a1f8371fc725ba00f4594c5c0f81c59
-Patch0:		0456c33cceb85e64c609beecddee942624b51a72.patch
-Patch4:		e3e50718f3b890a79c7b13f7c993248fa0e5fc7b.patch
+Source0:	http://archive.xfce.org/src/xfce/xfce4-panel/4.11/%{name}-%{version}.tar.bz2
+# Source0-md5:	21e056bdfb7a6b4d70e4ded619b2a88d
 URL:		http://www.xfce.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -65,8 +63,6 @@ Header files for building Xfce panel plugins.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch4 -p1
 
 %build
 %{__gtkdocize}
@@ -128,7 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_libdir}/xfce4/panel/migrate
 %attr(755,root,root) %{_libdir}/xfce4/panel/plugins/*.so
-%attr(755,root,root) %{_libdir}/xfce4/panel/wrapper
+%attr(755,root,root) %{_libdir}/xfce4/panel/wrapper-1.0
 %{_datadir}/xfce4/panel/plugins/*.desktop
 
 %{_iconsdir}/hicolor/*/*/*
