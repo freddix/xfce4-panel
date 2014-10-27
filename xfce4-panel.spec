@@ -3,7 +3,7 @@
 Summary:	Next generation panel for Xfce
 Name:		xfce4-panel
 Version:	4.10.1
-Release:	1
+Release:	2
 License:	GPL v2, LGPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/xfce/xfce4-panel/4.10/%{name}-%{version}.tar.bz2
@@ -93,8 +93,8 @@ install -d $RPM_BUILD_ROOT%{_libdir}/xfce4/{modules,panel-plugins}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/{,xfce4/{mcs-plugins,panel/plugins}}/*.la
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/{,xfce4/panel/plugins}/*.la
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{name}
 
